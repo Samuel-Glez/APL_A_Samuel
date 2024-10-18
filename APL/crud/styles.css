@@ -1,0 +1,135 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Usamos min-height en lugar de height */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px; /* Añadimos margen para pantallas pequeñas */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Tamaño adaptable */
+}
+
+/* Tabla (solo aplica en index.php) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem; /* Tamaño adaptable */
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+/* Estilo de botones y enlaces */
+button, a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+button:hover, a:hover {
+    background-color: #45a049;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Tamaño adaptable */
+}
+
+/* Botón centrado */
+button {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Estilo para enlace de volver */
+a {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* CONSULTAS DE MEDIOS (Responsive Design) */
+
+/* Para pantallas pequeñas (móviles en orientación vertical) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* Aumentamos el ancho para aprovechar más espacio */
+        padding: 15px; /* Reducimos un poco el relleno */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem; /* Disminuimos el tamaño de los títulos */
+    }
+
+    input[type="text"], input[type="email"] {
+        padding: 8px; /* Ajustamos el relleno de los inputs */
+        font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+    }
+
+    button, a {
+        padding: 8px 12px; /* Reducimos el tamaño de los botones */
+        font-size: 0.9rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem; /* Reducimos el tamaño de la fuente en la tabla */
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación horizontal o pantallas pequeñas) */
+@media (max-width: 400px) {
+    h1, h2 {
+        font-size: 1.2rem; /* Ajustamos el tamaño del texto en pantallas muy pequeñas */
+    }
+
+    table, th, td {
+        font-size: 0.8rem; /* Texto más pequeño en tablas */
+    }
+
+    button, a {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
